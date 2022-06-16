@@ -38,21 +38,16 @@
     </dependencies>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.web3j</groupId>
-                <artifactId>web3j-maven-plugin</artifactId>
-                <version>${web3j-maven-plugin.version}</version>
+       <plugins>
+          <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
                 <configuration>
-                    <soliditySourceFiles>
-                        <directory>src/main/solidity</directory>
-                        <includes>
-                            <include>*.sol</include>
-                        </includes>
-                    </soliditySourceFiles>
+                <fork>true</fork>
+                <executable>C:\Program Files\Java\jdk1.8.0_141\bin\javac.exe</executable>
                 </configuration>
-            </plugin>
-            <plugin>
+          </plugin>
+          <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>${exec-maven-plugin}</version>
