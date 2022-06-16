@@ -35,18 +35,20 @@
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
         </dependency>
-    </dependencies>
-
-    <build>
-       <plugins>
-          <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
-                <configuration>
-                <fork>true</fork>
-                <executable>C:\Program Files\Java\jdk1.8.0_141\bin\javac.exe</executable>
-                </configuration>
-          </plugin>
+   <dependencies>
+</dependencies>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
           <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -56,6 +58,4 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
-
 </project>
